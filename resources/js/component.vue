@@ -1,16 +1,16 @@
 <template>
     <div>
-      <h1>Hello, Vue.js!</h1>
+      <h1>Hello, Vue!</h1>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'ExampleComponent',
+    name: 'Component',
   };
   </script>
   
-  <style>
-  /* Add your styles here */
+  <style scoped>
+  /* Component styles */
   </style>
   
