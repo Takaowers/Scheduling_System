@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Login from "../../golden-values/src/pages/login";
+import Success from "../../golden-values/src/pages/successPage";
+import Scheduler from "./scheduler/scheduler";
+import Schedules from "./scheduler/schedules";
+import School from "./scheduler/school";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="./scheduler/school.js" element={<School />} />
+        <Route path="./scheduler/scheduler.js" element={<Scheduler />} />
+        <Route path="./scheduler/schedules.js.js" element={<Schedules />} />
+      </Routes>
     </div>
   );
 }
