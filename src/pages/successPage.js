@@ -6,7 +6,8 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "../components/modal";
 import Login from "./login";
-import Scheduler from "../scheduler/scheduler";
+import Scheduler from "./scheduler";
+
 
 // npm i react-icons
 // install mo lahat supabase nasa login yung url
@@ -19,7 +20,9 @@ function Success() {
   ]);
   console.log(state);
   const handleClick = () => {};
-  const handleDateClick = (arg) => {};
+  const handleDateClick = (arg) => {
+    setModal(!modal);
+  };
   const handleEventClick = () => {
     alert(true);
   };
@@ -27,15 +30,14 @@ function Success() {
   return (
     <div id="calendar">
       <Modal modal={modal} setModal={setModal} />
+  
 
       <FullCalendar
         className="fullcalendar"
         customButtons={{
           custom1: {
             text: "Add lesson",
-            click: function () {
-              setModal(!modal);
-            },
+            click: function () {},
           },
           custom2: {
             text: "School",
