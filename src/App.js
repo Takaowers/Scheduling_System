@@ -1,9 +1,4 @@
-import { Routes, Route } from "react-router-dom";
-import Login from "../../golden-values/src/pages/login";
-import Success from "../../golden-values/src/pages/successPage";
-import Scheduler from "./pages/scheduler";
-import Schedules from "./pages/schedules";
-import School from "./pages/school";
+import Layout from "./FrontEnd/userLayout/layout";
 
 // const data = [
 //   {
@@ -23,14 +18,7 @@ import School from "./pages/school";
 function App() {
   return (
     <div className="">
-      <Scheduler />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/success" element={<Success />} />
-        <Route path="./scheduler/school.js" element={<School />} />
-        <Route path="./scheduler/scheduler.js" element={<Scheduler />} />
-        <Route path="./scheduler/schedules.js.js" element={<Schedules />} />
-      </Routes>
+      <Layout />
     </div>
   );
 }
